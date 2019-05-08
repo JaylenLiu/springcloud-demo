@@ -5,7 +5,15 @@ server:
   port: 8000
 eureka:
   instance:
-    hostname: server1
+    hostname: localhost
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8001/eureka/
   client:
-    service-url:
-      defaultZone: http://server2:8001/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false
+
+
+
