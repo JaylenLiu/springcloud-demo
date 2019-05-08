@@ -19,10 +19,8 @@ public class HelloController {
         List<String> result =  client.getServices();
         List<ServiceInstance> instances = client.getInstances("eureka-client");
         instances.forEach(serviceInstance -> {
-            System.out.println(serviceInstance.getServiceId());
             System.out.println(serviceInstance.getHost());
             System.out.println(serviceInstance.getPort());
-            System.out.println(serviceInstance.getUri());
         });
         return "hello world";
     }

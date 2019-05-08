@@ -3,8 +3,16 @@ spring:
     name: feign-consumer
 server:
   port: 9100
-
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application.xml,application.json
+      min-request-size: 2048
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
+logging.level.jaylen.feign.service.HelloService: DEBUG

@@ -17,6 +17,6 @@ public class HelloController {
 
     @GetMapping("/feign-consumer")
     public String helloConsumer(){
-        return helloService.hello();
+        return helloService.index();
     }
 }
