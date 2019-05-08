@@ -2,7 +2,7 @@ spring:
   application:
     name: ribbon-consumer
 server:
-  port: 9090
+  port: 9200
 eureka:
   client:
     serviceUrl:

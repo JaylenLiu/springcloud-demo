@@ -13,6 +13,7 @@
         <module>EurekaClient</module>
         <module>EurekaConsumer</module>
         <module>FeignConsumer</module>
+        <module>API-gateway</module>
     </modules>
 
     <properties>

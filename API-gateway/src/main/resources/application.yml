@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 9200
+zuul:
+  routers:
+    api-a:
+      path: /api/**

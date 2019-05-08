@@ -2,7 +2,7 @@ spring:
   application:
     name: feign-consumer
 server:
-  port: 9100
+  port: 9300
 feign:
   hystrix:
     enabled: true
