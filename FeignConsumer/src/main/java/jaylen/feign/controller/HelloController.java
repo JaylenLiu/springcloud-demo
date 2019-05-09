@@ -19,4 +19,9 @@ public class HelloController {
     public String helloConsumer(){
         return helloService.index();
     }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello, this is feign consumer!";
+    }
 }

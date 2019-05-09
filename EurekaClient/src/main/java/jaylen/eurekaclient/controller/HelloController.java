@@ -14,14 +14,19 @@ public class HelloController {
     @Autowired
     private DiscoveryClient client;
 
-    @GetMapping("/index")
-    public String index() {
-        List<String> result =  client.getServices();
-        List<ServiceInstance> instances = client.getInstances("eureka-client");
-        instances.forEach(serviceInstance -> {
-            System.out.println(serviceInstance.getHost());
-            System.out.println(serviceInstance.getPort());
-        });
-        return "hello world";
+    @GetMapping("/hello")
+    public String hello() {
+//        List<String> result =  client.getServices();
+//        List<ServiceInstance> instances = client.getInstances("eureka-client");
+//        instances.forEach(serviceInstance -> {
+//            System.out.println(serviceInstance.getHost());
+//            System.out.println(serviceInstance.getPort());
+//        });
+        return "hello, this is eureka client";
+    }
+
+    @GetMapping("/bye")
+    public String bye(){
+        return "bye, I'm eurekaClient";
     }
 }

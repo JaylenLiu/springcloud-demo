@@ -3,7 +3,28 @@ spring:
     name: api-gateway
 server:
   port: 9200
+#  /actuator/routes 可以查看路由表信息
 zuul:
-  routers:
-    api-a:
-      path: /api/**
+  routes:
+    a:
+      path: /a/**
+      serviceId: eureka-client
+    feign-consumer: /b/**
+#    本地跳转
+    c:
+      path: /c/**
+      url: forward:/local
+#  不自动生成路由
+#  ignored-services: feign-consumer
+#  prefix: /api
+#  保留转发后的前缀
+#  strip-prefix: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes
