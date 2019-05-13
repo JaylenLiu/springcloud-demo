@@ -16,6 +16,7 @@
         <module>API-gateway</module>
         <module>ConfigServer</module>
         <module>ConfigClient</module>
+        <module>ApiGatewayDynamicRoute</module>
     </modules>
 
     <properties>
