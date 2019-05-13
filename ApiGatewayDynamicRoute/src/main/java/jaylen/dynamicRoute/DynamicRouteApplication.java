@@ -7,6 +7,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 
 /**
  * @Author: Jaylen
@@ -21,6 +22,7 @@ public class DynamicRouteApplication {
     }
 
     @Bean
+    @Primary
     @RefreshScope
     @ConfigurationProperties("zuul")
     public ZuulProperties zuulProperties(){
