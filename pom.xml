@@ -17,6 +17,7 @@
         <module>ConfigServer</module>
         <module>ConfigClient</module>
         <module>ApiGatewayDynamicRoute</module>
+        <module>Rabbitmq</module>
     </modules>
 
     <properties>

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: rabbitmq
+  rabbitmq:
+    host: localhost
+    prot: 5672
+    username: jaylen
+    password: 123456
