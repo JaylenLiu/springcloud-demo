@@ -15,7 +15,7 @@ public class ConsumerController {
     @GetMapping("/consumer-hello")
     @HystrixCommand(fallbackMethod = "error")
     public String consumerTest(){
-        return restTemplate.getForEntity("http://eureka-client/index", String.class).getBody();
+            return restTemplate.getForEntity("http://eureka-client/hello", String.class).getBody();
     }
 
     public String error(){
